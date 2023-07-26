@@ -1,0 +1,54 @@
+﻿@model List<SchoolManagement.Models.StdAttendence>
+@{
+    ViewBag.Title = "Fee";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<br />
+<br />
+<br />
+<br /><br /><br /><br />
+
+<div class="col-lg-12">
+    <div class="card">
+        <div class="card-body">
+            <div class="card-title">
+                <h4>Table Hover</h4>
+            </div>
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Ref No</th>
+                            <th>Attendance</th>
+                            <th>Class</th>
+                            <th>Student</th>
+                            <th>Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <tbody>
+                        @foreach (var attendance in Model)
+                        {
+                            <tr>
+                                <td>@attendance.AttendenceId</td>
+                                <td class="badge -success">@attendance.Attendence</td>
+                                <td>@attendance.Class</td>
+                                <td>@attendance.StudentId</td>
+                                <td>@attendance.Date</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- /# card -->
+</div>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
